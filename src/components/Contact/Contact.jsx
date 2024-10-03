@@ -11,7 +11,7 @@ const Contact = ({ id, name, number }) => {
   };
 
   return (
-    <li className={css.contactItem}>
+    <>
       <div className={css.contactInfo}>
         <p className={css.info}>
           <FaUser className={css.contactIcon} />
@@ -25,7 +25,7 @@ const Contact = ({ id, name, number }) => {
       <button className={css.deleteBtn} type="button" onClick={handleDelete}>
         Delete
       </button>
-    </li>
+    </>
   );
 };
 

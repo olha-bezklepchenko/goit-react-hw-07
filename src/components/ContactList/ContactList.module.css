@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 1132px;
 }
 
 .contactItem {
@@ -16,10 +15,20 @@
   padding: 10px;
   width: 364px;
   align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 1024px) {
+  .contactList {
+    max-width: 748px;
+    justify-content: start;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .contactList {
+    max-width: 1132px;
     justify-content: start;
     margin: 0 auto;
   }

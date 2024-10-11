@@ -9,6 +9,7 @@ const SearchBox = () => {
   const handleFilterChange = (e) => {
     dispatch(changeFilter(e.target.value));
   };
+
   return (
     <div className={css.searchBox}>
       <label htmlFor="search" className={css.label}>

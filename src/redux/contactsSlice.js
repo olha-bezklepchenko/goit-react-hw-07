@@ -11,7 +11,7 @@ const initialState = {
 const contactsSlice = createSlice({
   name: "contacts",
   initialState,
-  extraRedusers: (builder) => {
+  extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.items = action.payload;
@@ -59,8 +59,8 @@ const contactsSlice = createSlice({
 });
 
 export const selectContacts = (state) => state.contacts.items;
-export const selectIsError = (state) => state.contacts.error;
-export const selectIsLoading = (state) => state.contacts.loading;
+export const selectIsError = (state) => state.contacts.isError;
+export const selectIsLoading = (state) => state.contacts.isLoading;
 
 export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter],

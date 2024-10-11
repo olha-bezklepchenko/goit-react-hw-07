@@ -9,7 +9,7 @@
 }
 
 .contactIcon {
-  color: #052a4b;
+  color: #065096;
 }
 
 .deleteBtn {
@@ -31,6 +31,6 @@
 }
 
 .deleteBtn:hover {
-  background-color: #052a4b;
+  background-color: #065096;
   color: #dce9f5;
 }

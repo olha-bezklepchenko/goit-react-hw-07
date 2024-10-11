@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIsError, selectIsLoading } from "./redux/contactsSlice.js";
 import { useEffect } from "react";
 import { fetchContacts } from "./redux/contactsOps.js";
+import Loader from "./components/Loader/Loader.jsx";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -22,11 +23,19 @@ const App = () => {
     <div className={css.container}>
       <h1 className={css.title}>
         <FaAddressBook className={css.titleIcon} />
-        Phonebook
+        Phone<span className={css.titleAccent}>Book</span>
       </h1>
-      {isLoading && !isError && <b>Request in progress...</b>}
       <ContactForm />
       <SearchBox />
+      {isLoading && !isError && <Loader />}
+      {isError && (
+        <p className={css.error}>
+          Something went wrong...
+          <span className={css.errorMessage}>
+            Please check your internet connection
+          </span>
+        </p>
+      )}
       <ContactList />
     </div>
   );

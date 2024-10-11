@@ -45,6 +45,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             id="name"
+            autoComplete="name"
           ></Field>
           <ErrorMessage name="name" component="p" className={css.error} />
         </div>
@@ -57,6 +58,7 @@ const ContactForm = () => {
             type="text"
             name="number"
             id="number"
+            autoComplete="number"
           ></Field>
           <ErrorMessage name="number" component="p" className={css.error} />
         </div>

@@ -8,11 +8,15 @@ const ContactList = () => {
 
   return (
     <ul className={css.contactList}>
-      {filteredContacts.map(({ id, name, number }) => (
-        <li key={id} className={css.contactItem}>
-          <Contact id={id} name={name} number={number} />
-        </li>
-      ))}
+      {filteredContacts.length === 0 ? (
+        <p className={css.message}>No contacts</p>
+      ) : (
+        filteredContacts.map(({ id, name, number }) => (
+          <li key={id} className={css.contactItem}>
+            <Contact id={id} name={name} number={number} />
+          </li>
+        ))
+      )}
     </ul>
   );
 };
